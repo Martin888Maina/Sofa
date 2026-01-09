@@ -1,67 +1,246 @@
-/* BODY STYLING */
-body{
+/* ================================================
+   SOFA - Modern Stylesheet
+   A clean, responsive design for the Sofa website
+   ================================================ */
 
-    font-weight: bold;
-
+/* CSS Custom Properties for easy theming and maintenance */
+:root {
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #666666;
+    --color-text-muted: #999999;
+    --color-border: #e0e0e0;
+    --color-background: #ffffff;
+    
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    
+    --font-size-base: 16px;
+    --font-size-large: 1.125rem;
+    --font-size-hero: clamp(3rem, 8vw, 5rem);
+    
+    --transition-smooth: all 0.3s ease;
 }
-/* IMAGE STYLING */
-p img{
 
-    margin-left: 420px;
-
-}
-/* HEADING 1 STYLING */
-h1{
-
-    text-align: center;
-    font-size: 80px;
-
-}
-/* HEADING 3 STYLING */
-h3{
-
-    text-align: center;
-
-}
-/* NAVIGATION BAR STYLING */
-nav ul li{
-
-    list-style-type: none;  
-    display: inline-flex;
+/* Base styles and resets */
+* {
     margin: 0;
-    padding-top:20px;
-    padding-right: 100px;
-   
+    padding: 0;
+    box-sizing: border-box;
 }
-/* NAVIGATION BAR STYLING */
-nav ul li img{
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    font-size: var(--font-size-base);
+}
+
+/* Smooth scroll behavior for better UX */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================================================
+   HEADER SECTION
+   ================================================ */
+
+header {
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-sm);
+}
+
+/* Logo styling with responsive sizing */
+.logo {
+    max-width: 100%;
+    height: auto;
+    width: clamp(200px, 40vw, 400px);
+}
+
+/* ================================================
+   MAIN CONTENT
+   ================================================ */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+/* ================================================
+   HERO SECTION
+   ================================================ */
+
+.hero {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Main heading with responsive sizing */
+h1 {
+    font-size: var(--font-size-hero);
+    font-weight: bold;
+    margin-bottom: var(--spacing-md);
+    letter-spacing: -0.02em;
+}
+
+/* Tagline container for the company description */
+.tagline {
+    margin: var(--spacing-lg) auto;
+    max-width: 800px;
+}
+
+h2 {
+    font-size: var(--font-size-large);
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    padding: var(--spacing-md) var(--spacing-sm);
+}
+
+/* Horizontal dividers for visual separation */
+hr {
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid var(--color-border);
+}
+
+/* ================================================
+   NAVIGATION / SERVICE CARDS
+   ================================================ */
+
+nav {
+    margin: var(--spacing-xl) 0;
+}
+
+/* Grid layout for service cards with responsive columns */
+.service-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+}
+
+/* Individual service card styling */
+.service-card {
+    padding: var(--spacing-md);
+    transition: var(--transition-smooth);
+    border-radius: 8px;
+}
+
+/* Subtle hover effect for interactivity */
+.service-card:hover {
+    background-color: #fafafa;
+    transform: translateY(-2px);
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-primary);
+}
+
+.service-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-top: var(--spacing-sm);
+}
+
+/* Arrow icon for visual interest */
+.arrow-icon {
     width: 10px;
     height: 10px;
-
+    opacity: 0.5;
+    transition: var(--transition-smooth);
 }
-/* FOOTER STYLING */
-footer{
 
+.service-card:hover .arrow-icon {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+/* ================================================
+   FOOTER SECTION
+   ================================================ */
+
+footer {
     text-align: center;
-
+    padding: var(--spacing-xl) var(--spacing-sm);
+    margin-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-border);
 }
-/* FOOTER STYLING */
-footer span{
 
-    color: grey;
-
+/* Announcement banner styling */
+.announcement {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
 }
-/* FOOTER STYLING */
-footer img{
 
+.app-icon {
     width: 20px;
     height: 20px;
-
 }
-/* HORIZONTAL LINE STYLING */
-hr{
 
-    width: 95%;
+.announcement-label {
+    font-weight: bold;
+    color: var(--color-text-primary);
+}
+
+.announcement-text {
+    color: var(--color-text-muted);
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-md);
+    }
     
+    h1 {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    :root {
+        --spacing-xl: 3rem;
+        --spacing-lg: 2rem;
+    }
+    
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .announcement {
+        font-size: 0.9rem;
+    }
+}
+
+/* Large screens for optimal reading width */
+@media (min-width: 1400px) {
+    main {
+        max-width: 1400px;
+    }
 }
