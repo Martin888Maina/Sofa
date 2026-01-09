@@ -1,126 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- SEO and discoverability -->
+    <meta name="description"
+        content="Sofa is a creative software and interaction design company based in Amsterdam. We develop innovative products and help others design theirs.">
+    <meta name="keywords" content="software design, interaction design, product development, UX design, Amsterdam">
+    <meta name="author" content="Sofa">
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Sofa - Software & Interaction Design">
+    <meta property="og:description" content="We develop products and help others design theirs.">
+    <meta property="og:type" content="website">
+
+    <title>Sofa - Software & Interaction Design</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- HEADER  SECTION-->
+    <!-- Main brand header with logo -->
+    <header>
+        <img src="Images/Sofa.png" alt="Sofa company logo" class="logo">
+    </header>
 
-    <p>
+    <!-- Primary content area -->
+    <main>
 
-             <img src="Images/Sofa.png">
+        <!-- Hero section introducing the company -->
+        <section class="hero">
+            <h1>We are sofa</h1>
 
-    </p>
-  
+            <div class="tagline">
+                <hr aria-hidden="true">
+                <h2>Sofa is a software and interaction design company. We develop products and help others design
+                    theirs.</h2>
+                <hr aria-hidden="true">
+            </div>
+        </section>
 
-<!-- BODY SECTION -->
+        <!-- Navigation cards showcasing main service areas -->
+        <nav aria-label="Main service areas">
+            <ul class="service-grid">
 
+                <li>
+                    <article class="service-card">
+                        <h3>Software</h3>
+                        <img src="Images/Arrow.png" alt="" class="arrow-icon" aria-hidden="true">
+                        <p>We make some really good Mac<br>and web applications.</p>
+                    </article>
+                </li>
 
-        <h1>We are sofa</h1>
+                <li>
+                    <article class="service-card">
+                        <h3>Design</h3>
+                        <img src="Images/Arrow.png" alt="" class="arrow-icon" aria-hidden="true">
+                        <p>A sample of our work from icons<br>to entire interfaces.</p>
+                    </article>
+                </li>
 
-    
-<!-- TEXT SECTION -->
+                <li>
+                    <article class="service-card">
+                        <h3>Company</h3>
+                        <img src="Images/Arrow.png" alt="" class="arrow-icon" aria-hidden="true">
+                        <p>Sofa was founded in 2008 and is<br>based in Amsterdam.</p>
+                    </article>
+                </li>
 
-    <div>
+                <li>
+                    <article class="service-card">
+                        <h3>Blog</h3>
+                        <img src="Images/Arrow.png" alt="" class="arrow-icon" aria-hidden="true">
+                        <p>Our thoughts on design code<br>and everything else.</p>
+                    </article>
+                </li>
 
-        <hr>
+            </ul>
+        </nav>
 
-            <h3>Sofa is a software and interaction design company. We develop products and help others design theirs.</h3>
-    
-        <hr>
+    </main>
 
-    </div>
-
-<!-- NAVIGATION SECTION -->
-
-    <nav>
-
-        <ul>
-
-            <li>
-
-                <div>
-
-                    Software
-                    <img src="Images/Arrow.png">
-                    <p>We make some really good Mac <br> and web applications.</p>
-                
-                </div>
-                
-                
-
-            </li>
-
-            <li>
-
-                <div>
-                    Design
-                    <img src="Images/Arrow.png">
-                    <p>A sample of our work from icons <br> to entire interfaces.</p> 
-                
-                </div>
-                
-            
-            </li>
-
-
-             <li>
-                
-                <div>
-                    Company
-                    <img src="Images/Arrow.png">
-                    <p>Sofa was founded in 2008 and is <br> based in Amsterdam.</p>
-                
-                </div>
-                 
-            </li>
-
-
-            <li>
-
-                <div>
-                    Blog
-                    <img src="Images/Arrow.png">
-                    <p>Our thoughts on design code <br> and everything else.</p>
-                </div>
-                
-            </li>
-
-
-        </ul>
-
-    </nav>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-  <!--FOOTER SECTION  -->
-
-        <footer>
-
-                  <img src="Images/Kaleidoscope.png"> &nbsp;
-                   Announcement &nbsp;
-                   <span>Meet Kaleidoscope, the best sofa app.</span>
-
-        </footer>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-
+    <!-- Footer announcement section -->
+    <footer>
+        <div class="announcement">
+            <img src="Images/Kaleidoscope.png" alt="Kaleidoscope app icon" class="app-icon">
+            <span class="announcement-label">Announcement</span>
+            <span class="announcement-text">Meet Kaleidoscope, the best sofa app.</span>
+        </div>
+    </footer>
 
 </body>
+
 </html>
