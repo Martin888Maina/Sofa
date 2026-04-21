@@ -4,7 +4,7 @@ A modern, responsive landing page for Sofa, a creative software and interaction 
 
 ## Live Demo
 
-View the live site: [GitHub Pages Link](https://martin888maina.github.io/sofa)
+View the live site: [sofa.martinmaina.dev](https://sofa.martinmaina.dev)
 
 ## Preview
 
@@ -88,12 +88,9 @@ Or simply drag and drop the `index.html` file into your browser.
 
 ### Deployment
 
-This project can be easily deployed to GitHub Pages:
+The site is deployed on a DigitalOcean Droplet and served by Nginx at [sofa.martinmaina.dev](https://sofa.martinmaina.dev). HTTPS is provided by a Let's Encrypt certificate with automatic renewal.
 
-1. Push your code to GitHub
-2. Go to repository Settings > Pages
-3. Select your branch (usually `main` or `master`)
-4. Your site will be published at `https://martin888maina.github.io/sofa`
+Because the project is a static HTML/CSS page, deployment is just a `git clone` of this repository onto the server, a small Nginx server block pointing `root` at the clone, and `certbot --nginx` to issue the certificate.
 
 ## Development Journey
 
@@ -144,7 +141,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact
 
-Project Link: [https://github.com/Martin888Maina/sofa](https://github.com/Martin888Maina/sofa)
+Project Link: [https://github.com/Martin888Maina/Sofa](https://github.com/Martin888Maina/Sofa)
 
 ---
 
