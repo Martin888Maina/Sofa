@@ -1,30 +1,25 @@
-/* ================================================
-   SOFA - Modern Stylesheet
-   A clean, responsive design for the Sofa website
-   ================================================ */
+/* SOFA - Stylesheet */
 
-/* CSS Custom Properties for easy theming and maintenance */
 :root {
     --color-text-primary: #1a1a1a;
     --color-text-secondary: #666666;
     --color-text-muted: #999999;
     --color-border: #e0e0e0;
     --color-background: #ffffff;
-    
+
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 3rem;
     --spacing-xl: 5rem;
-    
+
     --font-size-base: 16px;
     --font-size-large: 1.125rem;
     --font-size-hero: clamp(3rem, 8vw, 5rem);
-    
+
     --transition-smooth: all 0.3s ease;
 }
 
-/* Base styles and resets */
 * {
     margin: 0;
     padding: 0;
@@ -40,30 +35,24 @@ body {
     font-size: var(--font-size-base);
 }
 
-/* Smooth scroll behavior for better UX */
 html {
     scroll-behavior: smooth;
 }
 
-/* ================================================
-   HEADER SECTION
-   ================================================ */
+/* Header */
 
 header {
     text-align: center;
     padding: var(--spacing-md) var(--spacing-sm);
 }
 
-/* Logo styling with responsive sizing */
 .logo {
     max-width: 100%;
     height: auto;
     width: clamp(200px, 40vw, 400px);
 }
 
-/* ================================================
-   MAIN CONTENT
-   ================================================ */
+/* Main content */
 
 main {
     max-width: 1200px;
@@ -71,16 +60,13 @@ main {
     padding: 0 var(--spacing-sm);
 }
 
-/* ================================================
-   HERO SECTION
-   ================================================ */
+/* Hero */
 
 .hero {
     text-align: center;
     margin-bottom: var(--spacing-xl);
 }
 
-/* Main heading with responsive sizing */
 h1 {
     font-size: var(--font-size-hero);
     font-weight: bold;
@@ -88,7 +74,6 @@ h1 {
     letter-spacing: -0.02em;
 }
 
-/* Tagline container for the company description */
 .tagline {
     margin: var(--spacing-lg) auto;
     max-width: 800px;
@@ -102,7 +87,6 @@ h2 {
     padding: var(--spacing-md) var(--spacing-sm);
 }
 
-/* Horizontal dividers for visual separation */
 hr {
     width: 100%;
     max-width: 95%;
@@ -111,15 +95,12 @@ hr {
     border-top: 1px solid var(--color-border);
 }
 
-/* ================================================
-   NAVIGATION / SERVICE CARDS
-   ================================================ */
+/* Navigation / Service cards */
 
 nav {
     margin: var(--spacing-xl) 0;
 }
 
-/* Grid layout for service cards with responsive columns */
 .service-grid {
     list-style: none;
     display: grid;
@@ -128,14 +109,12 @@ nav {
     padding: var(--spacing-md) 0;
 }
 
-/* Individual service card styling */
 .service-card {
     padding: var(--spacing-md);
     transition: var(--transition-smooth);
     border-radius: 8px;
 }
 
-/* Subtle hover effect for interactivity */
 .service-card:hover {
     background-color: #fafafa;
     transform: translateY(-2px);
@@ -154,7 +133,6 @@ nav {
     margin-top: var(--spacing-sm);
 }
 
-/* Arrow icon for visual interest */
 .arrow-icon {
     width: 10px;
     height: 10px;
@@ -167,9 +145,7 @@ nav {
     transform: translateX(4px);
 }
 
-/* ================================================
-   FOOTER SECTION
-   ================================================ */
+/* Footer */
 
 footer {
     text-align: center;
@@ -178,7 +154,6 @@ footer {
     border-top: 1px solid var(--color-border);
 }
 
-/* Announcement banner styling */
 .announcement {
     display: inline-flex;
     align-items: center;
@@ -201,9 +176,7 @@ footer {
     color: var(--color-text-muted);
 }
 
-/* ================================================
-   RESPONSIVE DESIGN
-   ================================================ */
+/* Responsive design */
 
 /* Tablet and below */
 @media (max-width: 768px) {
@@ -211,11 +184,11 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: var(--spacing-md);
     }
-    
+
     h1 {
         font-size: clamp(2.5rem, 10vw, 4rem);
     }
-    
+
     h2 {
         font-size: 1rem;
     }
@@ -227,12 +200,12 @@ footer {
         --spacing-xl: 3rem;
         --spacing-lg: 2rem;
     }
-    
+
     .service-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-sm);
     }
-    
+
     .announcement {
         font-size: 0.9rem;
     }
